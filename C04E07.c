@@ -17,7 +17,7 @@ int main(){
     else if(strcmp(ch,"SP")==0) printf("%lf",0.12*dh);
     else if(strcmp(ch,"RJ")==0) printf("%lf",0.15*dh);
     else if(strcmp(ch,"MS")==0) printf("%lf",0.08*dh);
-        else printf("Error");
+    else printf("Error");
 
     system("pause");
     return 0;
