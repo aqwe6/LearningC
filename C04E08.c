@@ -16,7 +16,7 @@ int main(){
     if(d>7 && d<11) printf("Infant B\n");
     if(d>10 && d<14) printf("Juvenil A\n");
     if(d>13 && d<18) printf("Juvenil B\n");
-    if(d>18) printf("Senior B");
+    if(d>18) printf("Senior");
 
     system("pause");
     return 0;
