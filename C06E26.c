@@ -5,7 +5,7 @@
 
 int main()
 {
-    double X[5][5],Y[1][10];
+    double X[5][5];
     int x=0;
     for(int i = 0; i <= 4 ; i++)
     {
