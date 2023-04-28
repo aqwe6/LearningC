@@ -8,7 +8,7 @@ int main()
     double X[3][3], y;
     for(int i = 0; i <= 2 ; i++)
     {
-        for(int j = 0 ; j <=3 ; j++)
+        for(int j = 0 ; j <=2 ; j++)
         {
             scanf("%lf",&X[i][j]);
             if(i==0 && j== 0) y = X[0][j];
