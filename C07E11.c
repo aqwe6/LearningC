@@ -6,6 +6,7 @@
 int main()
 {
     char X[10];
+    int w=0;
     gets(X);
     for(int i = 0 ; i<= 9 ; i++)
     {
