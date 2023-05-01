@@ -17,8 +17,7 @@ int main()
     int a1=0,b1=0,c1=0,z=0;
     for(int i = 0 ; i < 6 ; i++)
     {
-        gets(x[i].name);
-        scanf("%d%d%d",&x[i].day,&x[i].month,&x[i].year);
+        scanf("%s%d%d%d",&x[i].name,&x[i].day,&x[i].month,&x[i].year);
         if(i==0)
         {
             a = x[0].year;
