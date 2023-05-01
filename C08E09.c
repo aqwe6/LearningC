@@ -18,9 +18,7 @@ int main()
 
     for(int i = 0 ; i < 5 ; i++)
     {
-        gets(x[i].name);
-        gets(x[i].sport);
-        scanf("%d%d%d%lf",&x[i].day,&x[i].month,&x[i].year,&x[i].height);
+        scanf("%s%s%d%d%d%lf",&x[i].name,&x[i].sport,&x[i].day,&x[i].month,&x[i].year,&x[i].height);
         if(i==0)
         {
             a = x[0].year;
