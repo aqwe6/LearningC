@@ -18,8 +18,7 @@ int main()
     int x=0,y=0;
     for(int i = 0; i<5;i++)
     {
-        gets(a[i].name);
-        scanf("%lf %lf %lf %lf",&a[i].registration,&a[i].t1,&a[i].t2,&a[i].t3);
+        scanf("%s %lf %lf %lf %lf",&a[i].name,&a[i].registration,&a[i].t1,&a[i].t2,&a[i].t3);
         a[i].media = (a[i].t1 + a[i].t2 + a[i].t3)/3;
         if(a[i].media>x)
         {
