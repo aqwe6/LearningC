@@ -8,71 +8,26 @@
 
 struct D
 {
-    double registration,t1,t2,t3;
+    double registration,t1,t2,t3,media;
     char name[100];
 };
 
 int main()
 {
-    struct D a1;
-    struct D a2;
-    struct D a3;
-    struct D a4;
-    struct D a5;
-    gets(a1.name);
-    scanf("%lf %lf %lf",&a1.t1,&a1.t2,&a1.t3);
-    gets(a2.name);
-    scanf("%lf %lf %lf",&a2.t1,&a2.t2,&a2.t3);
-    gets(a3.name);
-    scanf("%lf %lf %lf",&a3.t1,&a3.t2,&a3.t3);
-    gets(a4.name);
-    scanf("%lf %lf %lf",&a4.t1,&a4.t2,&a4.t3);
-    gets(a5.name);
-    scanf("%lf %lf %lf",&a5.t1,&a5.t2,&a5.t3);
-    double media1 = (a1.t1+a1.t2+a1.t3)/3;
-    double media2 = (a2.t1+a2.t2+a2.t3)/3;
-    double media3 = (a3.t1+a3.t2+a3.t3)/3;
-    double media4 = (a4.t1+a4.t2+a4.t3)/3;
-    double media5 = (a5.t1+a5.t2+a5.t3)/3;
-    if(media1>media2)
+    struct D a[5];
+    int x=0,y=0;
+    for(int i = 0; i<5;i++)
     {
-        if(media3>media4)
+        gets(a[i].name);
+        scanf("%lf %lf %lf %lf",&a[i].registration,&a[i].t1,&a[i].t2,&a[i].t3);
+        a[i].media = (a[i].t1 + a[i].t2 + a[i].t3)/3;
+        if(a[i].media>x)
         {
-            if(media1>media3)
-            {
-                if(media1>media5) printf("%s\n%lf\n%lf\n%lf\n",a1.name,a1.t1,a1.t2,a1.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
-            }
-            else if(media3>media5) printf("%s\n%lf\n%lf\n%lf\n",a3.name,a3.t1,a3.t2,a3.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
+            x = a[i].media;
+            y = i;
         }
-        else if(media1>media4)
-            {
-                if(media1>media5) printf("%s\n%lf\n%lf\n%lf\n",a1.name,a1.t1,a1.t2,a1.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
-            }
-            else if(media4>media5) printf("%s\n%lf\n%lf\n%lf\n",a4.name,a4.t1,a4.t2,a4.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
     }
-    else if(media3>media4)
-        {
-            if(media2>media3)
-            {
-                if(media2>media5) printf("%s\n%lf\n%lf\n%lf\n",a2.name,a2.t1,a2.t2,a2.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
-            }
-            else if(media3>media5) printf("%s\n%lf\n%lf\n%lf\n",a3.name,a3.t1,a3.t2,a3.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
-        }
-        else if(media2>media4)
-            {
-                if(media2>media5) printf("%s\n%lf\n%lf\n%lf\n",a2.name,a2.t1,a2.t2,a2.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
-            }
-            else if(media4>media5) printf("%s\n%lf\n%lf\n%lf\n",a4.name,a4.t1,a4.t2,a4.t3);
-                else printf("%s\n%lf\n%lf\n%lf\n",a5.name,a5.t1,a5.t2,a5.t3);
-
-
+    printf("%s %lf %lf %lf\n",a[y].name,a[y].t1,a[y].t2,a[y].t3);
     system("pause");
     return 0;
 
