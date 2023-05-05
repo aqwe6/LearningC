@@ -8,13 +8,14 @@
 
 double k (double x)
 {
-    double v = 1;
-    for(int i = 1 ; i <= 5 ; i++)
+    double d = x,e = x;
+    for(double i = 1 ; i <= 5 ; i++)
     {
-        if(i % 2 == 1) v = v - v*x*x/(2*i*(2*i+1));
-        if(i % 2 == 0) v = v + v*x*x/(2*i*(2*i+1));
+        e = e*x*x/(2*i*(2*i+1))*(-1);
+        d = d + e;
     }
-    return v;
+
+    return d;
 }
 
 int main()
