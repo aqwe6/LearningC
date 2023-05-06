@@ -1,22 +1,41 @@
-// Write a recursive function that receives an integer, greater than or equal to zero, and returns the nth term of the Fibonacci sequence.
-// This sequence begins at the zero-order term, and from the second term, its value is given by the sum of the previous two terms.
-// Some terms in this sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34.
+// Write a recursive function that takes an integer value and returns it reversed. Example:
+// Number read = 123.
+// Number returned = 321.
 
 #include<stdio.h>
 #include<stdlib.h>
 
-int k (int N)
+int k(int x)
 {
-    if(N == 0) return 0;
-    if(N == 2 || N== 1) return 1;
-    else return k(N-1) + k(N-2);
+    int y = 1,z=0;
+    while(x>=y)
+    {
+        y = y * 10;
+        z++;
+    }
+    int a[z];
+    int b = 10;
+    for(int i = 0 ; i < z ; i++)
+    {
+        if(i == 0) a[i] = x % b;
+        else a[i] = (x % b - (x % (b/10))) / (b/10);
+        b = b * 10;
+
+    }
+    int g,c = 1;
+    for(int i = z -1 ; i >= 0; i--)
+    {
+        g = g + a[i] * c;
+        c = c *10;
+    }
+    return g;
 }
 
 int main()
 {
-    int x;
-    scanf("%d",&x);
-    printf("%d",k(x));
+    int h;
+    scanf("%d",&h);
+    printf("%d\n",k(h));
 
     system("pause");
     return 0;
