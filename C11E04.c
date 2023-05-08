@@ -6,7 +6,7 @@
 
 int main()
 {
-    int n,a[n],*p;
+    int n,*p;
     scanf("%d",&n);
     p = (int *) malloc(n*sizeof(int));
     for(int i=0;i<n;i++) scanf("%d",&p[i]);
