@@ -1,3 +1,6 @@
+// Design a program that reads from the user the size of a vector to be read. In Then dynamically allocate that vector.
+// Finally, read the user vector and the Print.
+
 #include<stdio.h>
 #include<stdlib.h>
 
