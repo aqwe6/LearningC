@@ -16,7 +16,9 @@ char X(char N[50])
         N[k-i] = d;
         N[i] = e;
     }
-    return printf("%s\n",N);
+    char *p;
+    p = N;
+    return printf("%s\n",*p);
 }
 
 int main()
